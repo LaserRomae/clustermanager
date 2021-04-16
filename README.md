@@ -76,7 +76,7 @@ hostname: ""
 storage_prefix: "illumina-"
 ```
 As most of the params are pretty self-explainatory, please make sure you pay attention to the following:
-* the **ca_cert_file**, which points to the Let's Encrypt R1 root certificate (or full chain) in pem format (this is needed as not all the Linux distributions store it by default)
+* the **ca_cert_file**, which points to the [Let's Encrypt R1](https://letsencrypt.org/certificates/) root certificate (or full chain) in pem format (this is needed as not all the Linux distributions store it by default)
 * the **base_path**, which represents the path from which the CM will deploy its contents and files.
 * the **tmp_path** is currently not used in this version (but will be needed for the object storage sync)
 * the **hostname** param, which is used to override the hostname that is sent to the WorkflowManager.
