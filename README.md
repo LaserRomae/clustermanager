@@ -7,7 +7,7 @@ This repo contains the ILLUMINA clustermanager software.
 ## Basic concepts
 The CM connects your hardware to the ILLUMINA platform so that it can be used as a computing node. At this stage only a single server management is provided, while we are developing a version that will be able to manage a kubernetes or a docker swarm cluster.
 To add multiple nodes (i.e. CMs), you will need to provide a common storage among them. This can be easily done via a NFS server
-* [RedHat/Centos](red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [RedHat/Centos](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 * [Ubuntu](https://help.ubuntu.com/community/NFSv4Howto)
 * [Debian](https://wiki.debian.org/NFSServerSetup)
 
