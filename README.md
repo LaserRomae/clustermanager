@@ -20,6 +20,19 @@ or an object storage solution via s3fs
 ## Installing the software
 The software comes in different flavors. An rpm is provided for the Centos/RedHat community, a deb package for the Ubuntu/Debian and three executables (x86_64, Mach-O for x86_64 and arm)
 
+### RPM installation
+To install via the RPM package, simply run (as root):
+```bash
+yum -y install clustermanager-<version>.rpm
+```
+
+### DEB installation
+To install via del DEB package, simply run (as root):
+```bash
+dpkg -i clustermanager-<version>.deb
+```
+
+### Manual installation
 The deb and rpm packages will take care of installing the requirements. In case you're using the binary directly, make sure to install the following:
 * docker
 * redis
@@ -28,8 +41,9 @@ A quick way to have redis is to use it as a docker container
 ```bash
 docker run -it -d -p 6379:6379 redis:latest
 ```
+Please have a look at the [redis docker documentation](https://hub.docker.com/_/redis) for further information.
 
-copy the binary and use the **_-config_** to provide the path to look for the configuration file. The configuration file has to be name according to the ENVIRONMENT variable. If it is not set, use the following command:
+Copy the binary and use the **_-config_** to provide the path to look for the configuration file. The configuration file has to be name according to the ENVIRONMENT variable. If it is not set, use the following command:
 
 ```bash
 export ENVIRONMENT=production
@@ -40,8 +54,10 @@ then launch the CM (as root) with the following command:
 ```bash
 ./clustermanager -config /etc/clustermanager
 ```
+
 and the CM will look for the **_/etc/clustermanager/production.yml_** configuration file.
 In the next section we'll have a deeper look at the configuration file.
+
 ## Configuring your clustermanager
 The following text describes a CM configuration file:
 ```yaml
